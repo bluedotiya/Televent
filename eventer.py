@@ -13,6 +13,8 @@ while True:
         print(new_file_name)
         old_content = content.__len__()
         get(TELEGRAM_SEND_MESSAGE_URL.format(f'{new_file_name} fell in the net!  :D'), stream=True)
+    elif content.__len__() < old_content:
+        old_content -= 1
     time.sleep(15)
 
 
