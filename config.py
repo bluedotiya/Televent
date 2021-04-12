@@ -2,4 +2,4 @@ TOKEN = '1193665631:AAGZgkqfA19J7R5RQrJ46ajuy9m2F4buBsk'
 BASE_TELEGRAM_URL = f'https://api.telegram.org/bot{TOKEN}'
 TELEGRAM_SEND_MESSAGE_URL = BASE_TELEGRAM_URL + '/sendMessage?chat_id=613624132&text={}'
 TELEGRAM_SEND_STICKER_URL = BASE_TELEGRAM_URL + '/sendsticker?chat_id={}&sticker={}'
-NEWEGG_LINK = 'https://www.newegg.com/global/il-en/p/pl?Submit=Property&Subcategory=48&N=101613484%20600494828%20601357261%20600499109%20601294831%204131&IsPowerSearch=1&LeftPriceRange=0+900'
+PATH = "/home/pi/phishymal"
