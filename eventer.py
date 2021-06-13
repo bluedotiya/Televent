@@ -5,9 +5,9 @@ from config import TELEGRAM_SEND_MESSAGE_URL
 def condition():
     message = ''
     with open('/var/tmp/stats_gpu_fan_jq') as fan_speed_handle:
-       fan_speed = fan_speed_handle.readlines()[1]
+       fan_speed = fan_speed_handle.readlines()[1].split(':')[1].replace('\n', '')
     with open('/var/tmp/stats_gpu_temp_jq') as gpu_temp_handle:
-        gpu_temp = gpu_temp_handle.readlines()[1]
+        gpu_temp = gpu_temp_handle.readlines()[1].split(':')[1].replace('\n', '')
     if int(gpu_temp) > 55:
         message += f"GPU is Overheating at: {gpu_temp}\t"
     if int(fan_speed) > 30:
